@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: jsonpath-python
-  version: "1.1.5"
+  version: "1.1.6"
 
 package:
   name: ${{ name|lower }}
@@ -10,10 +10,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name | replace('-', '_') }}-${{ version }}.tar.gz
-  sha256: ceea2efd9e56add09330a2c9631ea3d55297b9619348c1055e5bfb9cb0b8c538
+  sha256: dded9932b4ec41fb8726e09c83afa4e6be618f938c2db287cc2a81723c639671
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
